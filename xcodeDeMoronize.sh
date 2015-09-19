@@ -1,10 +1,12 @@
 # This script is a filter (copies stdin to stdout) that compensates
 # for the fact that you can't disable auto indent in Xcode. Xcode positions
-# the first nonwhite character of every line the first nonwhite character
-# on the previous line. The only way around that is to backspace from
-# the default position to where you want to be.
+# the first character of every line under the first nonwhite character of the
+# previous line. If you line starts with whitespace, that whitespace is
+# *added* to the auto-indent spacing. If you want an indent level less than
+# the previous line, you have to type backspace characters to get to the
+# desired column.
 #
-# To prepare the file for type.scpt, you need to:
+# This script should:
 #
 # - detab the input
 #
@@ -23,12 +25,14 @@
 #       }
 #   }
 #
-#   is translated to:
+#   should be translated to:
 #
 #   func f(x: Bool) {
 #       if x == true {
 #     doSomethingElse()
 #   \b\b}
 #   \b\b\b\b}
+#
+# The following java program does all that:
 
 java -jar ~/bin/type/xcodeDeMoronize.jar
