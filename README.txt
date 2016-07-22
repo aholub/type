@@ -52,7 +52,9 @@ DESCRIPTION
 
 	When you run from the command line using osascript, files are injected
 	in the order specified. Specifying --help displays a dialog box holding
-	a very abbreviated version of this README file.
+	a very abbreviated version of this README file. If you don't specify
+	any command-line arguments, the script works as if you had double
+	clicked on the app icon: it inserts the clipboard contents.
 
 XCODE ISSUES
 	Annoyingly, XCode feels compelled to screw around with your
