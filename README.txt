@@ -54,6 +54,7 @@ DESCRIPTION
 	in the order specified. Specifying --help displays a dialog box holding
 	a very abbreviated version of this README file.
 
+XCODE ISSUES
 	Annoyingly, XCode feels compelled to screw around with your
 	formatting as you type, and there's no way to completely disable
 	this "feature."  For this script to work, go to
@@ -70,14 +71,31 @@ DESCRIPTION
 	*  uncheck Line wrapping
 	*  uncheck Syntax-aware indenting
 
+	XCode (and other editors) often support autoindenting. Unfortunately,
+	in XCode, there's no way to turn that feature off! 
+
 	type.scpt currently shells out to a script (~/bin/type/xcodeDeMoronize.sh)
-	for external processing that compensates for other flaws in XCode.  In
-	particular, there's no way to disable autoindenting to line up with
-	the previous line. Find details in the xcodeDeMoronize.sh file. If you
-	want to change (or remove) that processing, modify the shell script, but
-	don't remove it.  There's no way, at present, to change the name or
-	location of the script. The current script just executes a java program
-	that's included in the install.
+	that compensates for this problem. Find details in the
+	xcodeDeMoronize.sh file. If you want to change (or remove) that
+	processing, modify the shell script, but don't remove it.  There's no
+	way, at present, to change the name or location of the script. The
+	current script just executes a java program that's included in the
+	install.
+
+INTELLIJ IDEA ISSUES
+
+	Turn off everything in Preferences->Editor->Smart keys
+	Turn off everything in Preferences->General->Code Completion
+	Turn off everything in Preferences->General->Postfix Completion
+
+	Note that if you turn off Preferences->Editor->Smart keys->Smart indent,
+	you should xcodeDeMoronize.sh to not do anything. There's no harm
+	in leaving xcodeDeMoronize in place and leaving autoindent enabled if you
+	want to type manually as well as inject text.
+
+	You may want to turn off inspections if you're deliberately doing
+	something off the wall.
+
 
 BUGS
 	Once typing starts, there's no way to stop it. This is really annoying
@@ -154,9 +172,9 @@ COPYRIGHT and DISTRIBUTION
 	You may distribute this script freely, provided that you distribute
 	this file along with it and do not modify this copyright section.
 
-	You may modify this file to reflect any changes you make to the script,
-	but you may not remove the original copyright in that case.
-	Please send me a copy of your modifications as well (allen@holub.com)
+	You may modify this script to reflect any changes you make to the script,
+	but you may not remove the original copyright in that case, and
+	please send me a copy of your modifications (allen@holub.com)
 
 	You may not distribute this script or any derived work as part of a
 	commercial application.
