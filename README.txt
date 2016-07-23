@@ -56,6 +56,25 @@ DESCRIPTION
 	any command-line arguments, the script works as if you had double
 	clicked on the app icon: it inserts the clipboard contents.
 
+USING A KEYBOARD SHORTCUT
+	copy Type.workflow (it's a folder) to ~/Library/Services
+
+	That will let you run type from any application's <AppName>->Services
+	menu. To assign a keyboard shortcut, go into
+
+	System Preferences->Keyboard->Shortcuts->Services
+
+	and scroll down to find Type (it will be at or close to the bottom
+	of the list). Click on the box on the right of the line and type
+	the shortcut key you want to use. Try not to conflict with another
+	shortcut (I use Ctrl-Cmd-<space>).
+
+	You can set up Type and a shortcut key on a mac-on-mac Parallels VM,
+	and text you copy from the host will be pasted into an application
+	running on the VM (provided that the VM has the focus) when you hit
+	your shortcut key. That's particularly handy when the application is
+	maximized in the VM.
+
 XCODE ISSUES
 	Annoyingly, XCode feels compelled to screw around with your
 	formatting as you type, and there's no way to completely disable
